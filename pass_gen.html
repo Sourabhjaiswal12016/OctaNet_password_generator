@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? 
+family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pass_gen.css">
+</head>
+<body>
+    <div class="wrapper">
+   <div class="container">
+    <h1>PASSWORD GENERATOR</h1>
+    <div class="display-container">
+        <!-- input marked read only -->
+        <input readonly placeholder="password" class="display" data-passwordDisplay>
+        <button class="copyBtn" data-copy>
+            <span class="tooltip" data-copyMsg></span>
+            <img src="/webDevCODES/Mini Projects - Class 1 [Codes]/Lecture27 -Password Generator/assets/copy.svg" alt="copy" width="20" height="20">
+           <!-- <i class="fa-solid fa-copy"></i> -->
+        </button>
+    </div>
+
+<div class="input-container">
+    <div class="length-container">
+        <!-- password length section: child-1 -->
+        <p>Password Length</p>
+        <!-- since mujhe js se slider ko move kara ke length jyada kam karna hai isiliye custom attribute de dia -->
+        <!-- data-lemgthNumber: child-2 -->
+        <p data-lengthNumber>0</p>
+    </div>
+    <!-- slider section -->
+<input type="range" min="1" max="20" value="4" class="slider" step="1" data-lengthSlider>
+
+<!-- 4 div ke andar 4 checkboxes aur unke liye 4 labels -->
+<div class="check">
+    <input type="checkbox" id="uppercase" name="uppercase">
+    <label for="uppercase">includes uppercase letters</label>
+</div>
+
+<div class="check">
+    <input type="checkbox" id="lowercase" name="lowercase">
+    <label for="lowercase">includes lowercase letters</label>
+</div>
+
+<div class="check">
+    <input type="checkbox" id="symbols" name="symbols">
+    <label for="symbols">includes Symbols</label>
+</div>
+
+<div class="check">
+    <input type="checkbox" id="numbers" name="numbers">
+    <label for="numbers">includes Numbers</label>
+</div>
+<!-- strength section abhi chhorte hai CSS ke time dekhenge -->
+<div class="strength-container">
+    <p>Strength</p>
+    <!-- strength indicator par ek custom attribute de dete hai kyuki js ka logic lagega uspar -->
+    <div class="indicator" data-indicator></div>
+
+</div>
+<!-- generate password section -->
+<button class="generateButton">Generate Password</button>
+</div>
+   </div> 
+   <script src="pass_gen.js"></script>
+</div>
+</body>
+</html>
